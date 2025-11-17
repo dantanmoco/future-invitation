@@ -11,7 +11,7 @@
   <!-- 카카오톡/메신저 공유용 미리보기 이미지 설정 -->
   <meta property="og:title" content="미래융합회 황태진 초대회장 취임식 초대장" />
   <meta property="og:description" content="2025년 12월 10일(수) 오후 6시, 엔젤스데이에서 개최되는 미래융합회 황태진 초대회장 취임식에 정중히 초대합니다." />
-  <meta property="og:image" content="poster.jpg" />
+  <meta property="og:image" content="preview.jpg" />
   <meta property="og:type" content="website" />
 
   <style>
@@ -63,21 +63,22 @@
       overflow: hidden;
     }
 
+    /* 상단 메인 타이틀 */
     .title-main {
-      font-size: 2rem;          /* 데스크탑: 32px 정도 */
+      font-size: 2rem;          /* 데스크탑: 약 32px */
       font-weight: 700;
       text-align: center;
-      letter-spacing: -0.02em;
+      letter-spacing: 0.10em;
       margin-bottom: 6px;
       color: #1d2340;
-      white-space: nowrap;      /* 모바일 줄바꿈 방지 */
     }
 
     @media (max-width: 480px) {
-    .title-main {
-        font-size: 1.4rem;      /* 모바일: 약 22px */
-        letter-spacing: -0.01em;
-        white-space: normal;    /* 필요할 때 자연스럽게 줄바꿈 */
+      .title-main {
+        font-size: 1.45rem;     /* 모바일: 약 23px */
+        letter-spacing: 0.04em; /* 글자 간격 줄여서 한 글자씩 안 떨어지게 */
+        line-height: 1.35;
+        padding: 0 8px;
       }
     }
 
@@ -107,21 +108,20 @@
       display: block;
     }
 
-    .title-main {
-      font-size: 26px;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 8px;
-      letter-spacing: 0.16em;
-      color: #1b2140;
-    }
-
+    /* 서브 타이틀(설명 문구) */
     .title-sub {
-      font-size: 17px;
+      font-size: 14px;
       text-align: center;
       color: #555;
-      margin-bottom: 20px;
-      font-style: italic;
+      margin-bottom: 18px;
+      padding: 0 10px;
+    }
+
+    @media (max-width: 480px) {
+      .title-sub {
+        font-size: 13px;
+        padding: 0 16px;
+      }
     }
 
     .divider {
@@ -254,7 +254,7 @@
       border: 2px solid rgba(243, 244, 246, 0.85);
       background: #fff;
       margin-bottom: 10px;
-      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+      transition: transform 0.18s.ease, box-shadow 0.18s ease, border-color 0.18s ease;
     }
 
     .member-item:hover img {
@@ -340,7 +340,7 @@
       </div>
 
       <h1 class="title-main">미래융합회 황태진 초대회장 취임식</h1>
-      <h2 class="title-sub">미래융합회의 새로운 출발에 정중히 모십니다.</p>
+      <h2 class="title-sub">미래융합회의 새로운 출발에 정중히 모십니다.</h2>
       <div class="divider"></div>
 
       <!-- 인사말 -->
