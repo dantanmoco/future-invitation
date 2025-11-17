@@ -190,6 +190,59 @@
       margin-top: 30px;
       padding-top: 12px;
     }
+
+    /* ===== 임원 소개 섹션 스타일 ===== */
+    .member-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .member-item {
+      width: calc(33.33% - 20px);
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      .member-item {
+        width: calc(50% - 20px);
+      }
+    }
+
+    .member-photo-wrap {
+      display: inline-block;
+      overflow: hidden;
+      border-radius: 8px;
+      border: 3px solid #d7dbe4;
+      background: #fff;
+      margin-bottom: 8px;
+    }
+
+    .member-photo-wrap img {
+      width: 150px;
+      height: 190px; /* 반명함 비율 */
+      object-fit: cover;
+      transition: transform 0.2s ease;
+      display: block;
+    }
+
+    .member-photo-wrap:hover img {
+      transform: scale(1.05); /* 마우스 올리면 살짝 확대 */
+    }
+
+    .member-role {
+      font-size: 13px;
+      font-weight: 600;
+      color: #1a1d33;
+    }
+
+    .member-name {
+      font-size: 14px;
+      font-weight: 700;
+      margin-top: 3px;
+      color: #000;
+    }
   </style>
 </head>
 <body>
@@ -267,14 +320,10 @@
       </section>
 
       <div class="btn-row">
-        <!-- 오시는 길 버튼: 아래 지도 섹션으로 스크롤 -->
         <a href="#map-section" class="btn">오시는 길 보기</a>
-
-        <!-- 참석 여부 회신: 나중에 구글폼/네이버폼 링크 넣으면 됨 -->
-        <a href="https://forms.gle/your-form-link" target="_blank" class="btn-outline">참석 여부 회신</a>
+        <a href="#" class="btn-outline">참석 여부 회신</a>
       </div>
 
-      <!-- 네이버 지도 -->
       <section id="map-section">
         <div class="section-title">오시는 길</div>
         <iframe 
@@ -285,6 +334,69 @@
           allowfullscreen 
           loading="lazy">
         </iframe>
+      </section>
+
+      <!-- 임원 소개 섹션 -->
+      <section id="members" style="margin-top: 50px;">
+        <div class="section-title">미래융합회 임원 소개</div>
+
+        <div class="member-grid">
+
+          <!-- 1 -->
+          <div class="member-item">
+            <div class="member-photo-wrap">
+              <img src="황태진.jpg" alt="미래융합회 회장 황태진">
+            </div>
+            <div class="member-role">미래융합회 회장</div>
+            <div class="member-name">황태진</div>
+          </div>
+
+          <!-- 2 -->
+          <div class="member-item">
+            <div class="member-photo-wrap">
+              <img src="최종민.jpg" alt="미래융합회 사무국장 최종민">
+            </div>
+            <div class="member-role">미래융합회 사무국장</div>
+            <div class="member-name">최종민</div>
+          </div>
+
+          <!-- 3 -->
+          <div class="member-item">
+            <div class="member-photo-wrap">
+              <img src="김도연.jpg" alt="미래융합회 부회장 김도연">
+            </div>
+            <div class="member-role">미래융합회 부회장</div>
+            <div class="member-name">김도연</div>
+          </div>
+
+          <!-- 4 -->
+          <div class="member-item">
+            <div class="member-photo-wrap">
+              <img src="전영재.jpg" alt="미래융합회 부회장 전영재">
+            </div>
+            <div class="member-role">미래융합회 부회장</div>
+            <div class="member-name">전영재</div>
+          </div>
+
+          <!-- 5 -->
+          <div class="member-item">
+            <div class="member-photo-wrap">
+              <img src="박지연.jpg" alt="미래융합회 부회장 박지연">
+            </div>
+            <div class="member-role">미래융합회 부회장</div>
+            <div class="member-name">박지연</div>
+          </div>
+
+          <!-- 6 -->
+          <div class="member-item">
+            <div class="member-photo-wrap">
+              <img src="이동석.jpg" alt="미래융합회 감사 이동석">
+            </div>
+            <div class="member-role">미래융합회 감사</div>
+            <div class="member-name">이동석</div>
+          </div>
+
+        </div>
       </section>
 
       <footer>
