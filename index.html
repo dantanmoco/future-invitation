@@ -7,7 +7,7 @@
 
   <style>
     html {
-      scroll-behavior: smooth; /* ← 부드러운 스크롤 핵심 */
+      scroll-behavior: smooth;
     }
 
     * {
@@ -130,18 +130,6 @@
       background: #f2f2f2;
     }
 
-    /* 지도 박스 */
-    #map-section {
-      margin-top: 50px;
-    }
-
-    #map {
-      width: 100%;
-      height: 320px;
-      border-radius: 14px;
-      border: 1px solid #dedede;
-    }
-
     footer {
       text-align: center;
       font-size: 13px;
@@ -151,45 +139,19 @@
       border-top: 1px dashed #ddd;
     }
   </style>
-
-  <!-- 카카오맵 JS API (여기에 너의 카카오 지도 API KEY 넣을 수 있음) -->
-  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=YOUR_KAKAO_MAP_KEY&libraries=services"></script>
-
-  <script>
-    // 지도 로드 (기본 위치: 엔젤스데이 김포)
-    window.onload = function() {
-      var container = document.getElementById('map');
-      var options = {
-        center: new kakao.maps.LatLng(37.636585, 126.671216), // 위치 값
-        level: 3
-      };
-      var map = new kakao.maps.Map(container, options);
-
-      var markerPosition  = new kakao.maps.LatLng(37.636585, 126.671216);  
-      var marker = new kakao.maps.Marker({
-          position: markerPosition
-      });
-      marker.setMap(map);
-    }
-  </script>
-
 </head>
 <body>
 
   <div class="page-wrapper">
 
-    <!-- 상단 이미지 -->
     <div class="hero-image-wrap">
-      <!-- 여기에 포스터 이미지 넣기 (index.html과 같은 폴더에 파일 넣고 이름 변경) -->
       <img src="poster.jpg" alt="미래융합회 취임식 포스터" class="hero-image" />
     </div>
 
-    <!-- 타이틀 -->
     <h1 class="title-main">미래융합회 황태진 초대회장 취임식</h1>
     <h2 class="title-sub">Inauguration Ceremony</h2>
     <div class="divider"></div>
 
-    <!-- 인사말 -->
     <section class="box">
       <div class="section-title">인사말</div>
       <p>
@@ -208,7 +170,6 @@
       </p>
     </section>
 
-    <!-- 행사 안내 -->
     <section class="box">
       <div class="section-title">행사 안내</div>
 
@@ -233,7 +194,6 @@
       </div>
     </section>
 
-    <!-- 행사 순서 -->
     <section class="box">
       <div class="section-title">행사 순서</div>
 
@@ -253,16 +213,24 @@
       </div>
     </section>
 
-    <!-- 버튼 -->
     <div class="btn-row">
       <a href="#map-section" class="btn">오시는 길 보기</a>
       <a href="#" class="btn-outline">참석 여부 회신</a>
     </div>
 
-    <!-- 지도 섹션 -->
-    <section id="map-section">
+    <section id="map-section" style="margin-top: 50px;">
       <div class="section-title">오시는 길</div>
-      <div id="map"></div>
+
+      <div style="border-radius: 14px; overflow:hidden; border:1px solid #dedede;">
+        <iframe 
+          src="https://map.naver.com/v5/search/%EA%B9%80%ED%8F%AC%ED%95%9C%EA%B0%844%EB%A1%9C%20113%20%EC%8B%A0%ED%95%9C%ED%94%84%EB%9D%BC%EC%9E%90%2012%EC%B8%B5"
+          width="100%" 
+          height="330" 
+          style="border:0;" 
+          allowfullscreen 
+          loading="lazy">
+        </iframe>
+      </div>
     </section>
 
     <footer>
