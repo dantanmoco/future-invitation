@@ -2,283 +2,274 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <title>미래융합회 초대회장 취임식 초대장</title>
+  <title>미래융합회 황태진 초대회장 취임식 초대장</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- 필요 시 웹폰트 사용 가능: 주석 풀고 사용 -->
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet"> -->
-
   <style>
+    html {
+      scroll-behavior: smooth; /* ← 부드러운 스크롤 핵심 */
+    }
+
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Noto Sans KR", "Apple SD Gothic Neo",
-        "맑은 고딕", "Malgun Gothic", sans-serif;
-      background: #f5f5f7;
+      "맑은 고딕", "Malgun Gothic", sans-serif;
+      background: #f7f7fa;
       color: #222;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     .page-wrapper {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 24px 16px;
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 20px;
     }
 
-    .card {
-      max-width: 720px;
+    .hero-image-wrap {
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 28px;
+    }
+
+    .hero-image {
       width: 100%;
-      background: #ffffff;
-      border-radius: 18px;
-      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.06);
-      padding: 32px 24px 28px;
-    }
-
-    @media (min-width: 768px) {
-      .card {
-        padding: 40px 40px 32px;
-      }
-    }
-
-    .badge {
-      display: inline-block;
-      font-size: 12px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: #666;
-      border-radius: 999px;
-      padding: 4px 14px;
-      border: 1px solid #e0e0e0;
-      margin-bottom: 16px;
+      display: block;
     }
 
     .title-main {
-      font-size: 24px;
+      font-size: 26px;
       font-weight: 700;
-      letter-spacing: 0.12em;
       text-align: center;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+      letter-spacing: 0.1em;
     }
 
     .title-sub {
-      font-size: 18px;
-      font-weight: 500;
+      font-size: 17px;
       text-align: center;
+      color: #555;
       margin-bottom: 20px;
-      color: #444;
     }
 
     .divider {
-      width: 52px;
+      width: 60px;
       height: 2px;
       background: #222;
-      margin: 10px auto 28px;
-    }
-
-    .greeting {
-      font-size: 15px;
-      color: #444;
-      margin-bottom: 24px;
-      text-align: justify;
-    }
-
-    .greeting p + p {
-      margin-top: 10px;
+      margin: 12px auto 26px;
     }
 
     .section-title {
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: 0.18em;
+      font-size: 15px;
+      font-weight: 700;
+      color: #666;
+      margin-bottom: 10px;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: #999;
-      margin-bottom: 8px;
     }
 
-    .info-box {
+    .box {
+      background: #fff;
+      border: 1px solid #ececf0;
+      padding: 18px 20px;
       border-radius: 14px;
-      border: 1px solid #ebebf0;
-      background: #fafafa;
-      padding: 16px 18px;
-      font-size: 14px;
-      margin-bottom: 22px;
+      margin-bottom: 24px;
     }
 
-    .info-row {
+    .info-row, .schedule-row {
       display: flex;
+      margin-bottom: 8px;
       flex-wrap: wrap;
-      margin-bottom: 6px;
     }
 
-    .info-label {
-      width: 80px;
+    .label {
+      width: 90px;
       font-weight: 600;
       color: #555;
     }
 
-    .info-value {
+    .value {
       flex: 1;
       color: #333;
     }
 
-    .info-row:last-child {
-      margin-bottom: 0;
-    }
-
-    .note-box {
-      font-size: 13px;
-      color: #666;
-      margin-bottom: 22px;
-    }
-
-    .note-box ul {
-      list-style: disc;
-      padding-left: 18px;
-    }
-
-    .note-box li + li {
-      margin-top: 4px;
-    }
-
-    .button-row {
+    .btn-row {
       display: flex;
+      gap: 12px;
+      margin: 24px 0;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 22px;
     }
 
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
       padding: 10px 18px;
+      border: 1px solid #111;
+      background: #111;
+      color: #fff;
       border-radius: 999px;
-      font-size: 14px;
-      font-weight: 500;
-      border: 1px solid #111827;
-      background: #111827;
-      color: #ffffff;
       text-decoration: none;
-      cursor: pointer;
-      transition: background 0.2s ease, color 0.2s ease, transform 0.08s ease;
+      font-size: 14px;
+      transition: 0.2s;
     }
 
     .btn-outline {
-      background: #ffffff;
-      color: #111827;
-      border-color: #d1d5db;
+      background: #fff;
+      color: #111;
+      border: 1px solid #ddd;
     }
 
     .btn:hover {
-      transform: translateY(-1px);
-      background: #000000;
+      background: #000;
+      transform: translateY(-2px);
     }
 
     .btn-outline:hover {
-      background: #f3f4f6;
-      color: #111827;
+      background: #f2f2f2;
     }
 
-    .footer {
+    /* 지도 박스 */
+    #map-section {
+      margin-top: 50px;
+    }
+
+    #map {
+      width: 100%;
+      height: 320px;
+      border-radius: 14px;
+      border: 1px solid #dedede;
+    }
+
+    footer {
+      text-align: center;
       font-size: 13px;
       color: #777;
-      border-top: 1px dashed #e1e1e6;
-      padding-top: 10px;
-    }
-
-    .footer p + p {
-      margin-top: 4px;
-    }
-
-    .footer strong {
-      font-weight: 600;
+      margin-top: 40px;
+      padding-top: 18px;
+      border-top: 1px dashed #ddd;
     }
   </style>
+
+  <!-- 카카오맵 JS API (여기에 너의 카카오 지도 API KEY 넣을 수 있음) -->
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=YOUR_KAKAO_MAP_KEY&libraries=services"></script>
+
+  <script>
+    // 지도 로드 (기본 위치: 엔젤스데이 김포)
+    window.onload = function() {
+      var container = document.getElementById('map');
+      var options = {
+        center: new kakao.maps.LatLng(37.636585, 126.671216), // 위치 값
+        level: 3
+      };
+      var map = new kakao.maps.Map(container, options);
+
+      var markerPosition  = new kakao.maps.LatLng(37.636585, 126.671216);  
+      var marker = new kakao.maps.Marker({
+          position: markerPosition
+      });
+      marker.setMap(map);
+    }
+  </script>
+
 </head>
 <body>
+
   <div class="page-wrapper">
-    <div class="card">
-      <div style="text-align:center;">
-        <div class="badge">INVITATION</div>
-        <h1 class="title-main">미래융합회 초대회장 취임식</h1>
-        <h2 class="title-sub">Inauguration Ceremony</h2>
+
+    <!-- 상단 이미지 -->
+    <div class="hero-image-wrap">
+      <!-- 여기에 포스터 이미지 넣기 (index.html과 같은 폴더에 파일 넣고 이름 변경) -->
+      <img src="poster.jpg" alt="미래융합회 취임식 포스터" class="hero-image" />
+    </div>
+
+    <!-- 타이틀 -->
+    <h1 class="title-main">미래융합회 황태진 초대회장 취임식</h1>
+    <h2 class="title-sub">Inauguration Ceremony</h2>
+    <div class="divider"></div>
+
+    <!-- 인사말 -->
+    <section class="box">
+      <div class="section-title">인사말</div>
+      <p>
+        존경하는 내외 귀빈 여러분께 깊이 감사의 말씀을 올립니다.<br><br>
+        바쁘신 일정에도 불구하고 이 자리에 함께해 주시어, 부족한 제가 미래융합회 초대 회장으로서 첫 걸음을 내딛는 이 뜻깊은 자리를 빛내 주심에 진심으로 감사드립니다.
+      </p>
+      <p>
+        미래융합회는 다양한 분야의 리더들이 서로의 지혜와 역량을 나누며 지역사회와 국가 발전에 기여하고자 뜻을 모은 단체입니다. 저는 여러분의 기대에 부응할 수 있도록, 겸허한 자세로 소통하고 협력하며 단체가 나아가야 할 길을 성실히 열어가겠습니다.
+      </p>
+      <p>
+        오늘 김포지회 정기총회와 함께하는 이 자리가 회원 간 연대와 신뢰를 더욱 굳건히 하고, 미래융합회의 새로운 도약의 출발점이 되기를 진심으로 소망합니다. 변함없는 성원과 지도 편달을 부탁드립니다.
+      </p>
+      <p style="margin-top:14px; text-align:right;">
+        2025년 12월 10일<br>
+        미래융합회 초대 회장&nbsp;&nbsp;<strong>황태진</strong> 올림
+      </p>
+    </section>
+
+    <!-- 행사 안내 -->
+    <section class="box">
+      <div class="section-title">행사 안내</div>
+
+      <div class="info-row">
+        <div class="label">일시</div>
+        <div class="value">2025년 12월 10일(수) 오후 6시</div>
       </div>
 
-      <div class="divider"></div>
+      <div class="info-row">
+        <div class="label">장소</div>
+        <div class="value">김포한강4로 113, 신한프라자 12층 엔젤스데이</div>
+      </div>
 
-      <!-- 인사말 영역 -->
-      <section class="greeting">
-        <p>
-          귀하의 건승과 댁내 평안을 기원합니다.
-        </p>
-        <p>
-          미래융합회의 창립과 더불어 초대 회장 취임식을 아래와 같이 거행하고자 합니다.
-          바쁘신 가운데서도 참석하시어 자리를 빛내 주시고, 새로운 출발을 함께 축하해 주시면 감사하겠습니다.
-        </p>
-      </section>
+      <div class="info-row">
+        <div class="label">주최</div>
+        <div class="value">미래융합회</div>
+      </div>
 
-      <!-- 행사 정보 -->
-      <section>
-        <div class="section-title">행사 안내</div>
-        <div class="info-box">
-          <div class="info-row">
-            <div class="info-label">일&nbsp;&nbsp;&nbsp;시</div>
-            <div class="info-value">2025년 0월 0일(○) 오후 0시 0분</div>
-          </div>
-          <div class="info-row">
-            <div class="info-label">장&nbsp;&nbsp;&nbsp;소</div>
-            <div class="info-value">○○컨벤션센터 ○층 ○○홀</div>
-          </div>
-          <div class="info-row">
-            <div class="info-label">주&nbsp;&nbsp;&nbsp;최</div>
-            <div class="info-value">미래융합회</div>
-          </div>
-          <div class="info-row">
-            <div class="info-label">주요 순서</div>
-            <div class="info-value">개회식 · 경과보고 · 취임식 · 축사 · 폐회</div>
-          </div>
-        </div>
-      </section>
+      <div class="info-row">
+        <div class="label">문의</div>
+        <div class="value">담당자 번호 / 010-0000-0000</div>
+      </div>
+    </section>
 
-      <!-- 안내 및 드레스코드/주차 등 -->
-      <section class="note-box">
-        <div class="section-title">안내 사항</div>
-        <ul>
-          <li>원활한 진행을 위해 행사 시작 10분 전까지 착석해 주시기 바랍니다.</li>
-          <li>주차 공간이 협소하오니 가급적 대중교통 이용을 부탁드립니다.</li>
-          <!-- 필요 없으면 아래 줄을 삭제하세요 -->
-          <li>드레스 코드: 비즈니스 정장 또는 이에 준하는 복장</li>
-        </ul>
-      </section>
+    <!-- 행사 순서 -->
+    <section class="box">
+      <div class="section-title">행사 순서</div>
 
-      <!-- 버튼 영역: 참석 여부, 오시는 길 -->
-      <section class="button-row">
-        <!-- 참석 여부 링크: 구글폼·네이버폼 등으로 교체 -->
-        <a href="https://example.com/rsvp" target="_blank" class="btn">
-          참석 여부 회신하기
-        </a>
+      <div class="schedule-row">
+        <div class="label">17:00</div>
+        <div class="value">김포지회 정기총회</div>
+      </div>
 
-        <!-- 지도 링크: 네이버/카카오/구글 지도 URL로 교체 -->
-        <a href="https://map.naver.com/" target="_blank" class="btn btn-outline">
-          오시는 길 보기
-        </a>
-      </section>
+      <div class="schedule-row">
+        <div class="label">18:00</div>
+        <div class="value">미래융합회 회장 취임식</div>
+      </div>
 
-      <!-- 하단 문구 및 연락처 -->
-      <footer class="footer">
-        <p>2025년 0월 0일</p>
-        <p><strong>미래융합회 일동</strong></p>
-        <p>문의 : 010-0000-0000 / example@futureunion.or.kr</p>
-      </footer>
+      <div class="schedule-row">
+        <div class="label">18:30</div>
+        <div class="value">송년회 및 시상식</div>
+      </div>
+    </section>
+
+    <!-- 버튼 -->
+    <div class="btn-row">
+      <a href="#map-section" class="btn">오시는 길 보기</a>
+      <a href="#" class="btn-outline">참석 여부 회신</a>
     </div>
+
+    <!-- 지도 섹션 -->
+    <section id="map-section">
+      <div class="section-title">오시는 길</div>
+      <div id="map"></div>
+    </section>
+
+    <footer>
+      미래융합회 황태진 초대회장 취임식을 찾아주셔서 감사합니다.<br>
+      <strong>미래융합회 일동</strong>
+    </footer>
+
   </div>
 </body>
 </html>
